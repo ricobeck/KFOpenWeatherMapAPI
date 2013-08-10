@@ -33,11 +33,21 @@
         }
         else
         {
-            NSLog(@"could not get weather");
+            NSLog(@"could not get weather: %@", error);
         }
-        
     }];
     
+    [self.apiClient dailyForecastForCityName:@"Los Angeles" numberOfDays:4 withResultBlock:^(BOOL success, id responseData, NSError *error)
+    {
+        if (success)
+        {
+            NSLog(@"received forecast: %@", responseData);
+        }
+        else
+        {
+            NSLog(@"could not get forecast: %@", error);
+        }
+    }];
 }
 
 
