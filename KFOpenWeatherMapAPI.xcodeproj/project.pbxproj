@@ -19,6 +19,10 @@
 		1DB4E0D917B66904002AA933 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DB4E0D717B66904002AA933 /* MainStoryboard.storyboard */; };
 		1DB4E0DC17B66904002AA933 /* KFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E0DB17B66904002AA933 /* KFViewController.m */; };
 		1DB4E0E517B69DA5002AA933 /* KFOpenWeatherMapAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E0E417B69DA5002AA933 /* KFOpenWeatherMapAPIClient.m */; };
+		1DB4E0E917B6E125002AA933 /* KFOWMResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E0E817B6E125002AA933 /* KFOWMResponseModel.m */; };
+		1DB4E0ED17B6E3D3002AA933 /* JSONValueTransformer+Timestamp.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E0EC17B6E3D3002AA933 /* JSONValueTransformer+Timestamp.m */; };
+		1DB4E0F017B6E5BC002AA933 /* KFOWMMainWeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E0EF17B6E5BC002AA933 /* KFOWMMainWeatherModel.m */; };
+		1DB4E0F317B6E6D1002AA933 /* KFOWMWindModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E0F217B6E6D1002AA933 /* KFOWMWindModel.m */; };
 		AE6D16DF79A6459D9D7BB046 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2CC2DF8A7348C7BE79A933 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +46,14 @@
 		1DB4E0DB17B66904002AA933 /* KFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KFViewController.m; sourceTree = "<group>"; };
 		1DB4E0E317B69DA5002AA933 /* KFOpenWeatherMapAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFOpenWeatherMapAPIClient.h; sourceTree = "<group>"; };
 		1DB4E0E417B69DA5002AA933 /* KFOpenWeatherMapAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFOpenWeatherMapAPIClient.m; sourceTree = "<group>"; };
+		1DB4E0E717B6E125002AA933 /* KFOWMResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFOWMResponseModel.h; sourceTree = "<group>"; };
+		1DB4E0E817B6E125002AA933 /* KFOWMResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFOWMResponseModel.m; sourceTree = "<group>"; };
+		1DB4E0EB17B6E3D3002AA933 /* JSONValueTransformer+Timestamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONValueTransformer+Timestamp.h"; sourceTree = "<group>"; };
+		1DB4E0EC17B6E3D3002AA933 /* JSONValueTransformer+Timestamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONValueTransformer+Timestamp.m"; sourceTree = "<group>"; };
+		1DB4E0EE17B6E5BC002AA933 /* KFOWMMainWeatherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFOWMMainWeatherModel.h; sourceTree = "<group>"; };
+		1DB4E0EF17B6E5BC002AA933 /* KFOWMMainWeatherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFOWMMainWeatherModel.m; sourceTree = "<group>"; };
+		1DB4E0F117B6E6D1002AA933 /* KFOWMWindModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFOWMWindModel.h; sourceTree = "<group>"; };
+		1DB4E0F217B6E6D1002AA933 /* KFOWMWindModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFOWMWindModel.m; sourceTree = "<group>"; };
 		8E21B307C2664679BF1118BC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -122,8 +134,32 @@
 			children = (
 				1DB4E0E317B69DA5002AA933 /* KFOpenWeatherMapAPIClient.h */,
 				1DB4E0E417B69DA5002AA933 /* KFOpenWeatherMapAPIClient.m */,
+				1DB4E0EA17B6E3BD002AA933 /* Categories */,
+				1DB4E0E617B6DFE4002AA933 /* Models */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		1DB4E0E617B6DFE4002AA933 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1DB4E0E717B6E125002AA933 /* KFOWMResponseModel.h */,
+				1DB4E0E817B6E125002AA933 /* KFOWMResponseModel.m */,
+				1DB4E0EE17B6E5BC002AA933 /* KFOWMMainWeatherModel.h */,
+				1DB4E0EF17B6E5BC002AA933 /* KFOWMMainWeatherModel.m */,
+				1DB4E0F117B6E6D1002AA933 /* KFOWMWindModel.h */,
+				1DB4E0F217B6E6D1002AA933 /* KFOWMWindModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1DB4E0EA17B6E3BD002AA933 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				1DB4E0EB17B6E3D3002AA933 /* JSONValueTransformer+Timestamp.h */,
+				1DB4E0EC17B6E3D3002AA933 /* JSONValueTransformer+Timestamp.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +268,10 @@
 				1DB4E0D017B66904002AA933 /* KFAppDelegate.m in Sources */,
 				1DB4E0DC17B66904002AA933 /* KFViewController.m in Sources */,
 				1DB4E0E517B69DA5002AA933 /* KFOpenWeatherMapAPIClient.m in Sources */,
+				1DB4E0E917B6E125002AA933 /* KFOWMResponseModel.m in Sources */,
+				1DB4E0ED17B6E3D3002AA933 /* JSONValueTransformer+Timestamp.m in Sources */,
+				1DB4E0F017B6E5BC002AA933 /* KFOWMMainWeatherModel.m in Sources */,
+				1DB4E0F317B6E6D1002AA933 /* KFOWMWindModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

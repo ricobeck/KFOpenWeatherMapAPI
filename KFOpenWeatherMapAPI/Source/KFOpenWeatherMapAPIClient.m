@@ -7,6 +7,8 @@
 //
 
 #import "KFOpenWeatherMapAPIClient.h"
+#import "KFOWMResponseModel.h"
+
 #import <AFNetworking/AFNetworking.h>
 
 
@@ -51,7 +53,19 @@
     NSDictionary *params = [self parametersWithDictionary:@{@"q": city}];
     [self getPath:@"weather" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
-         resultBlock(YES, responseObject, nil);
+         NSDictionary *responseDictionary = responseObject;
+         NSError *error = nil;
+         KFOWMResponseModel *responseModel = [[KFOWMResponseModel alloc] initWithDictionary:responseDictionary error:&error];
+         
+         if (error == nil)
+         {
+             resultBlock(YES, responseModel, nil);
+         }
+         else
+         {
+             resultBlock(YES, responseObject, error);
+         }
+         
      }
           failure:^(AFHTTPRequestOperation *operation, NSError *error)
      {
@@ -213,6 +227,21 @@
         language = languageMap[language];
     }
     return language;
+}
+
+
+#pragma mark - Conversions
+
+
+- (NSNumber *)kelvinToCelcius:(NSNumber *)kelvin
+{
+    return @(kelvin.floatValue - 273.15);
+}
+
+
+- (NSNumber *)kelvinToFahrenheit:(NSNumber *)kelvin
+{
+    return @((kelvin.floatValue * 9/5) - 459.67);
 }
 
 

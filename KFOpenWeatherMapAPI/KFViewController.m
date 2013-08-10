@@ -43,7 +43,7 @@
      {
          if (success)
          {
-             NSLog(@"received forecast: %@", responseData);
+//             NSLog(@"received forecast: %@", responseData);
          }
          else
          {
@@ -55,7 +55,7 @@
     {
         if (success)
         {
-            NSLog(@"received daily forecast: %@", responseData);
+//            NSLog(@"received daily forecast: %@", responseData);
         }
         else
         {
