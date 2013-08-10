@@ -18,9 +18,12 @@
 		1DB4E0D617B66904002AA933 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DB4E0D517B66904002AA933 /* Default-568h@2x.png */; };
 		1DB4E0D917B66904002AA933 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DB4E0D717B66904002AA933 /* MainStoryboard.storyboard */; };
 		1DB4E0DC17B66904002AA933 /* KFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E0DB17B66904002AA933 /* KFViewController.m */; };
+		1DB4E0E517B69DA5002AA933 /* KFOpenWeatherMapAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E0E417B69DA5002AA933 /* KFOpenWeatherMapAPIClient.m */; };
+		AE6D16DF79A6459D9D7BB046 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2CC2DF8A7348C7BE79A933 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B2CC2DF8A7348C7BE79A933 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DB4E0BC17B66904002AA933 /* KFOpenWeatherMapAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KFOpenWeatherMapAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DB4E0BF17B66904002AA933 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1DB4E0C117B66904002AA933 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,6 +40,9 @@
 		1DB4E0D817B66904002AA933 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		1DB4E0DA17B66904002AA933 /* KFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KFViewController.h; sourceTree = "<group>"; };
 		1DB4E0DB17B66904002AA933 /* KFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KFViewController.m; sourceTree = "<group>"; };
+		1DB4E0E317B69DA5002AA933 /* KFOpenWeatherMapAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFOpenWeatherMapAPIClient.h; sourceTree = "<group>"; };
+		1DB4E0E417B69DA5002AA933 /* KFOpenWeatherMapAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFOpenWeatherMapAPIClient.m; sourceTree = "<group>"; };
+		8E21B307C2664679BF1118BC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,7 @@
 				1DB4E0C017B66904002AA933 /* UIKit.framework in Frameworks */,
 				1DB4E0C217B66904002AA933 /* Foundation.framework in Frameworks */,
 				1DB4E0C417B66904002AA933 /* CoreGraphics.framework in Frameworks */,
+				AE6D16DF79A6459D9D7BB046 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +66,7 @@
 				1DB4E0C517B66904002AA933 /* KFOpenWeatherMapAPI */,
 				1DB4E0BE17B66904002AA933 /* Frameworks */,
 				1DB4E0BD17B66904002AA933 /* Products */,
+				8E21B307C2664679BF1118BC /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +84,7 @@
 				1DB4E0BF17B66904002AA933 /* UIKit.framework */,
 				1DB4E0C117B66904002AA933 /* Foundation.framework */,
 				1DB4E0C317B66904002AA933 /* CoreGraphics.framework */,
+				0B2CC2DF8A7348C7BE79A933 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -88,6 +97,7 @@
 				1DB4E0D717B66904002AA933 /* MainStoryboard.storyboard */,
 				1DB4E0DA17B66904002AA933 /* KFViewController.h */,
 				1DB4E0DB17B66904002AA933 /* KFViewController.m */,
+				1DB4E0E217B69D77002AA933 /* Source */,
 				1DB4E0C617B66904002AA933 /* Supporting Files */,
 			);
 			path = KFOpenWeatherMapAPI;
@@ -107,6 +117,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1DB4E0E217B69D77002AA933 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				1DB4E0E317B69DA5002AA933 /* KFOpenWeatherMapAPIClient.h */,
+				1DB4E0E417B69DA5002AA933 /* KFOpenWeatherMapAPIClient.m */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -114,9 +133,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DB4E0DF17B66904002AA933 /* Build configuration list for PBXNativeTarget "KFOpenWeatherMapAPI" */;
 			buildPhases = (
+				9B84F438689843838BF0921F /* Check Pods Manifest.lock */,
 				1DB4E0B817B66904002AA933 /* Sources */,
 				1DB4E0B917B66904002AA933 /* Frameworks */,
 				1DB4E0BA17B66904002AA933 /* Resources */,
+				E1D99A861D984E0AA4888EEB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -169,6 +190,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9B84F438689843838BF0921F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E1D99A861D984E0AA4888EEB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1DB4E0B817B66904002AA933 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -177,6 +231,7 @@
 				1DB4E0CC17B66904002AA933 /* main.m in Sources */,
 				1DB4E0D017B66904002AA933 /* KFAppDelegate.m in Sources */,
 				1DB4E0DC17B66904002AA933 /* KFViewController.m in Sources */,
+				1DB4E0E517B69DA5002AA933 /* KFOpenWeatherMapAPIClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +315,7 @@
 		};
 		1DB4E0E017B66904002AA933 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E21B307C2664679BF1118BC /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KFOpenWeatherMapAPI/KFOpenWeatherMapAPI-Prefix.pch";
@@ -271,6 +327,7 @@
 		};
 		1DB4E0E117B66904002AA933 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E21B307C2664679BF1118BC /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KFOpenWeatherMapAPI/KFOpenWeatherMapAPI-Prefix.pch";
@@ -299,6 +356,7 @@
 				1DB4E0E117B66904002AA933 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

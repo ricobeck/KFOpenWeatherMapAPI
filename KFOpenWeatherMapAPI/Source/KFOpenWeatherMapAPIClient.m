@@ -1,0 +1,219 @@
+//
+//  KFOpenWeatherMapAPIClient.m
+//  KFOpenWeatherMapAPI
+//
+//  Created by Rico Becker on 8/10/13.
+//  Copyright (c) 2013 KF Interactive. All rights reserved.
+//
+
+#import "KFOpenWeatherMapAPIClient.h"
+#import <AFNetworking/AFNetworking.h>
+
+
+@interface KFOpenWeatherMapAPIClient ()
+
+
+@property (nonatomic, strong) NSString *apiKey;
+
+@property (nonatomic, strong) NSString *apiVersion;
+
+
+@end
+
+
+@implementation KFOpenWeatherMapAPIClient
+
+
+- (id)initWithAPIKey:(NSString *)apiKey andAPIVersion:(NSString *)apiVersion
+{
+    self = [super initWithBaseURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://api.openweathermap.org/data/%@", apiVersion]]];
+    if (self)
+    {
+        [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
+        
+        self.apiKey = apiKey;
+        self.apiVersion = apiVersion;
+        self.language = [self valueForPreferredLanguage];
+        
+        self.temperatureType = KFOWMTemperatureTypeCelcius;
+        [self setDefaultHeader:@"x-api-key" value:self.apiKey];
+        [self setDefaultHeader:@"Accept" value:@"application/json; charset=utf-8"];
+    }
+    return self;
+}
+
+
+#pragma mark - API calls for current weather
+
+
+- (void)weatherForCityName:(NSString *)city withResultBlock:(KFOWMResultBlock)resultBlock
+{
+    NSDictionary *params = [self parametersWithDictionary:@{@"q": city}];
+    [self getPath:@"weather" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         resultBlock(YES, responseObject, nil);
+     }
+          failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         resultBlock(NO, nil, error);
+     }];
+}
+
+
+- (void)weatherForCityId:(NSString *)cityId withResultBlock:(KFOWMResultBlock)resultBlock
+{
+    NSDictionary *params = [self parametersWithDictionary:@{@"id": cityId}];
+    [self getPath:@"weather" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         resultBlock(YES, responseObject, nil);
+     }
+          failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         resultBlock(NO, nil, error);
+     }];
+}
+
+
+- (void)weatherForCoordinate:(CLLocationCoordinate2D)locationCoordinate withResultBlock:(KFOWMResultBlock)resultBlock
+{
+    NSDictionary *params = [self parametersWithDictionary:@{@"lat": [NSString stringWithFormat:@"%f", locationCoordinate.latitude],@"lon": [NSString stringWithFormat:@"%f", locationCoordinate.longitude]}];
+    [self getPath:@"weather" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         resultBlock(YES, responseObject, nil);
+     }
+          failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         resultBlock(NO, nil, error);
+     }];
+}
+
+
+#pragma mark - 3 hour forecast
+
+
+- (void)forecastForCityName:(NSString *)city withResultBlock:(KFOWMResultBlock)resultBlock
+{
+    NSDictionary *params = [self parametersWithDictionary:@{@"q": city}];
+    [self getPath:@"forecast" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         resultBlock(YES, responseObject, nil);
+     }
+          failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         resultBlock(NO, nil, error);
+     }];
+}
+
+
+- (void)forecastForCityId:(NSString *)cityId withResultBlock:(KFOWMResultBlock)resultBlock
+{
+    NSDictionary *params = [self parametersWithDictionary:@{@"id": cityId}];
+    [self getPath:@"forecast" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         resultBlock(YES, responseObject, nil);
+     }
+          failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         resultBlock(NO, nil, error);
+     }];
+}
+
+
+- (void)forecastForCoordinate:(CLLocationCoordinate2D)locationCoordinate withResultBlock:(KFOWMResultBlock)resultBlock
+{
+    NSDictionary *params = [self parametersWithDictionary:@{@"lat": [NSString stringWithFormat:@"%f", locationCoordinate.latitude],@"lon": [NSString stringWithFormat:@"%f", locationCoordinate.longitude]}];
+    [self getPath:@"forecast" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         resultBlock(YES, responseObject, nil);
+     }
+          failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         resultBlock(NO, nil, error);
+     }];
+}
+
+
+#pragma mark - Daily forecast
+
+
+- (void)dailyForecastForCityName:(NSString *)city numberOfDays:(NSUInteger)days withResultBlock:(KFOWMResultBlock)resultBlock
+{
+    NSDictionary *params = [self parametersWithDictionary:@{@"q": city, @"cnt": @(days)}];
+    [self getPath:@"forecast/daily" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         resultBlock(YES, responseObject, nil);
+     }
+          failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         resultBlock(NO, nil, error);
+     }];
+}
+
+
+- (void)dailyForecastForCityId:(NSString *)cityId numberOfDays:(NSUInteger)days withResultBlock:(KFOWMResultBlock)resultBlock
+{
+    NSDictionary *params = [self parametersWithDictionary:@{@"id": cityId, @"cnt": @(days)}];
+    [self getPath:@"forecast/daily" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         resultBlock(YES, responseObject, nil);
+     }
+          failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         resultBlock(NO, nil, error);
+     }];
+}
+
+
+- (void)dailyForecastForCoordinate:(CLLocationCoordinate2D)locationCoordinate numberOfDays:(NSUInteger)days withResultBlock:(KFOWMResultBlock)resultBlock
+{
+    NSDictionary *params = [self parametersWithDictionary:@{@"lat": [NSString stringWithFormat:@"%f", locationCoordinate.latitude],@"lon": [NSString stringWithFormat:@"%f", locationCoordinate.longitude], @"cnt": @(days)}];
+    [self getPath:@"forecast/daily" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         resultBlock(YES, responseObject, nil);
+     }
+          failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         resultBlock(NO, nil, error);
+     }];
+}
+
+
+#pragma mark - Request Parameters
+
+
+- (NSDictionary *)parametersWithDictionary:(NSDictionary *)parameters
+{
+    NSMutableDictionary *finalizedParameters = [NSMutableDictionary dictionaryWithDictionary:@{@"lang": self.language, @"unit" : [self valueForUnitType:self.unitType]}];
+    [finalizedParameters addEntriesFromDictionary:parameters];
+    return [finalizedParameters copy];
+}
+
+
+- (NSString *)valueForUnitType:(KFOWMMUnitType)unitType
+{
+    switch (unitType)
+    {
+        case KFOWMUnitTypeMetric:
+            return @"metric";
+            break;
+        case KFOWMUnitTypeImperial:
+            return @"imperial";
+            break;
+    }
+}
+
+
+- (NSString *)valueForPreferredLanguage
+{
+    NSDictionary *languageMap = languageMap = @{@"es":@"sp", @"en-GB":@"en", @"pt-PT":@"pt", @"sv":@"se", @"uk":@"ua", @"zh-Hans":@"zh_cn", @"zh-Hant":@"zh_tw"};
+
+    NSString *language = [[NSLocale preferredLanguages] objectAtIndex:0];
+    if (languageMap[language] != nil)
+    {
+        language = languageMap[language];
+    }
+    return language;
+}
+
+
+@end
