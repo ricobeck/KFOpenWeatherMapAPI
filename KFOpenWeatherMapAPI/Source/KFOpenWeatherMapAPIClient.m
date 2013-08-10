@@ -79,7 +79,55 @@
     NSDictionary *params = [self parametersWithDictionary:@{@"lat": [NSString stringWithFormat:@"%f", locationCoordinate.latitude],@"lon": [NSString stringWithFormat:@"%f", locationCoordinate.longitude]}];
     [self getPath:@"weather" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
-         NSLog(@"got weather: %@", responseObject);
+         resultBlock(YES, responseObject, nil);
+     }
+          failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         resultBlock(NO, nil, error);
+     }];
+}
+
+
+#pragma mark - 3 hour forecast
+
+
+#pragma mark - Daily forecast
+
+
+- (void)dailyForecastForCityName:(NSString *)city numberOfDays:(NSUInteger)days withResultBlock:(KFOWMResultBlock)resultBlock
+{
+    NSDictionary *params = [self parametersWithDictionary:@{@"q": city, @"cnt": @(days)}];
+    [self getPath:@"forecast/daily" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         resultBlock(YES, responseObject, nil);
+     }
+          failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         resultBlock(NO, nil, error);
+     }];
+}
+
+
+- (void)dailyForecastForCityId:(NSString *)cityId numberOfDays:(NSUInteger)days withResultBlock:(KFOWMResultBlock)resultBlock
+{
+    NSDictionary *params = [self parametersWithDictionary:@{@"id": cityId, @"cnt": @(days)}];
+    [self getPath:@"forecast/daily" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         resultBlock(YES, responseObject, nil);
+     }
+          failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         resultBlock(NO, nil, error);
+     }];
+}
+
+
+- (void)dailyForecastForCoordinate:(CLLocationCoordinate2D)locationCoordinate numberOfDays:(NSUInteger)days withResultBlock:(KFOWMResultBlock)resultBlock
+{
+    NSDictionary *params = [self parametersWithDictionary:@{@"lat": [NSString stringWithFormat:@"%f", locationCoordinate.latitude],@"lon": [NSString stringWithFormat:@"%f", locationCoordinate.longitude], @"cnt": @(days)}];
+    [self getPath:@"forecast/daily" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         resultBlock(YES, responseObject, nil);
      }
           failure:^(AFHTTPRequestOperation *operation, NSError *error)
      {
