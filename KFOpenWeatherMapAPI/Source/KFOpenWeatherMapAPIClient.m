@@ -91,6 +91,48 @@
 #pragma mark - 3 hour forecast
 
 
+- (void)forecastForCityName:(NSString *)city withResultBlock:(KFOWMResultBlock)resultBlock
+{
+    NSDictionary *params = [self parametersWithDictionary:@{@"q": city}];
+    [self getPath:@"forecast" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         resultBlock(YES, responseObject, nil);
+     }
+          failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         resultBlock(NO, nil, error);
+     }];
+}
+
+
+- (void)forecastForCityId:(NSString *)cityId withResultBlock:(KFOWMResultBlock)resultBlock
+{
+    NSDictionary *params = [self parametersWithDictionary:@{@"id": cityId}];
+    [self getPath:@"forecast" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         resultBlock(YES, responseObject, nil);
+     }
+          failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         resultBlock(NO, nil, error);
+     }];
+}
+
+
+- (void)forecastForCoordinate:(CLLocationCoordinate2D)locationCoordinate withResultBlock:(KFOWMResultBlock)resultBlock
+{
+    NSDictionary *params = [self parametersWithDictionary:@{@"lat": [NSString stringWithFormat:@"%f", locationCoordinate.latitude],@"lon": [NSString stringWithFormat:@"%f", locationCoordinate.longitude]}];
+    [self getPath:@"forecast" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         resultBlock(YES, responseObject, nil);
+     }
+          failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         resultBlock(NO, nil, error);
+     }];
+}
+
+
 #pragma mark - Daily forecast
 
 

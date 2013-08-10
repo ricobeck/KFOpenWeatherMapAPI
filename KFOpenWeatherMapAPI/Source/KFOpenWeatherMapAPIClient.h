@@ -48,6 +48,13 @@ typedef NS_ENUM(NSUInteger, KFOWMMUnitType)
 - (void)weatherForCoordinate:(CLLocationCoordinate2D)locationCoordinate withResultBlock:(KFOWMResultBlock)resultBlock;
 
 
+- (void)forecastForCityName:(NSString *)city withResultBlock:(KFOWMResultBlock)resultBlock;
+
+- (void)forecastForCityId:(NSString *)cityId withResultBlock:(KFOWMResultBlock)resultBlock;
+
+- (void)forecastForCoordinate:(CLLocationCoordinate2D)locationCoordinate withResultBlock:(KFOWMResultBlock)resultBlock;
+
+
 - (void)dailyForecastForCityName:(NSString *)city numberOfDays:(NSUInteger)days withResultBlock:(KFOWMResultBlock)resultBlock;
 
 - (void)dailyForecastForCityId:(NSString *)cityId numberOfDays:(NSUInteger)days withResultBlock:(KFOWMResultBlock)resultBlock;
