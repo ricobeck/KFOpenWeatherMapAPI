@@ -39,6 +39,7 @@
         }
     }];
     
+    /*
     [self.apiClient forecastForCityName:@"Los Angeles" withResultBlock:^(BOOL success, id responseData, NSError *error)
      {
          if (success)
@@ -62,6 +63,7 @@
             NSLog(@"could not get daily forecast: %@", error);
         }
     }];
+     */
 }
 
 
