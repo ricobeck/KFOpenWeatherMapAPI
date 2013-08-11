@@ -23,6 +23,10 @@
 		1DB4E0ED17B6E3D3002AA933 /* JSONValueTransformer+Timestamp.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E0EC17B6E3D3002AA933 /* JSONValueTransformer+Timestamp.m */; };
 		1DB4E0F017B6E5BC002AA933 /* KFOWMMainWeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E0EF17B6E5BC002AA933 /* KFOWMMainWeatherModel.m */; };
 		1DB4E0F317B6E6D1002AA933 /* KFOWMWindModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E0F217B6E6D1002AA933 /* KFOWMWindModel.m */; };
+		1DB4E0F617B77EB7002AA933 /* KFOWMWeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E0F517B77EB7002AA933 /* KFOWMWeatherModel.m */; };
+		1DB4E0F917B782C4002AA933 /* KFOWMSystemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E0F817B782C4002AA933 /* KFOWMSystemModel.m */; };
+		1DB4E0FC17B78462002AA933 /* KFOWMCloudModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E0FB17B78462002AA933 /* KFOWMCloudModel.m */; };
+		1DB4E10217B78CCF002AA933 /* KFOWMCoordinateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E10117B78CCF002AA933 /* KFOWMCoordinateModel.m */; };
 		AE6D16DF79A6459D9D7BB046 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2CC2DF8A7348C7BE79A933 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +58,14 @@
 		1DB4E0EF17B6E5BC002AA933 /* KFOWMMainWeatherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFOWMMainWeatherModel.m; sourceTree = "<group>"; };
 		1DB4E0F117B6E6D1002AA933 /* KFOWMWindModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFOWMWindModel.h; sourceTree = "<group>"; };
 		1DB4E0F217B6E6D1002AA933 /* KFOWMWindModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFOWMWindModel.m; sourceTree = "<group>"; };
+		1DB4E0F417B77EB7002AA933 /* KFOWMWeatherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFOWMWeatherModel.h; sourceTree = "<group>"; };
+		1DB4E0F517B77EB7002AA933 /* KFOWMWeatherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFOWMWeatherModel.m; sourceTree = "<group>"; };
+		1DB4E0F717B782C4002AA933 /* KFOWMSystemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFOWMSystemModel.h; sourceTree = "<group>"; };
+		1DB4E0F817B782C4002AA933 /* KFOWMSystemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFOWMSystemModel.m; sourceTree = "<group>"; };
+		1DB4E0FA17B78462002AA933 /* KFOWMCloudModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFOWMCloudModel.h; sourceTree = "<group>"; };
+		1DB4E0FB17B78462002AA933 /* KFOWMCloudModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFOWMCloudModel.m; sourceTree = "<group>"; };
+		1DB4E10017B78CCF002AA933 /* KFOWMCoordinateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFOWMCoordinateModel.h; sourceTree = "<group>"; };
+		1DB4E10117B78CCF002AA933 /* KFOWMCoordinateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFOWMCoordinateModel.m; sourceTree = "<group>"; };
 		8E21B307C2664679BF1118BC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -143,12 +155,20 @@
 		1DB4E0E617B6DFE4002AA933 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1DB4E0E717B6E125002AA933 /* KFOWMResponseModel.h */,
-				1DB4E0E817B6E125002AA933 /* KFOWMResponseModel.m */,
 				1DB4E0EE17B6E5BC002AA933 /* KFOWMMainWeatherModel.h */,
 				1DB4E0EF17B6E5BC002AA933 /* KFOWMMainWeatherModel.m */,
+				1DB4E0E717B6E125002AA933 /* KFOWMResponseModel.h */,
+				1DB4E0E817B6E125002AA933 /* KFOWMResponseModel.m */,
+				1DB4E0F417B77EB7002AA933 /* KFOWMWeatherModel.h */,
+				1DB4E0F517B77EB7002AA933 /* KFOWMWeatherModel.m */,
 				1DB4E0F117B6E6D1002AA933 /* KFOWMWindModel.h */,
 				1DB4E0F217B6E6D1002AA933 /* KFOWMWindModel.m */,
+				1DB4E0F717B782C4002AA933 /* KFOWMSystemModel.h */,
+				1DB4E0F817B782C4002AA933 /* KFOWMSystemModel.m */,
+				1DB4E0FA17B78462002AA933 /* KFOWMCloudModel.h */,
+				1DB4E0FB17B78462002AA933 /* KFOWMCloudModel.m */,
+				1DB4E10017B78CCF002AA933 /* KFOWMCoordinateModel.h */,
+				1DB4E10117B78CCF002AA933 /* KFOWMCoordinateModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -272,6 +292,10 @@
 				1DB4E0ED17B6E3D3002AA933 /* JSONValueTransformer+Timestamp.m in Sources */,
 				1DB4E0F017B6E5BC002AA933 /* KFOWMMainWeatherModel.m in Sources */,
 				1DB4E0F317B6E6D1002AA933 /* KFOWMWindModel.m in Sources */,
+				1DB4E0F617B77EB7002AA933 /* KFOWMWeatherModel.m in Sources */,
+				1DB4E0F917B782C4002AA933 /* KFOWMSystemModel.m in Sources */,
+				1DB4E0FC17B78462002AA933 /* KFOWMCloudModel.m in Sources */,
+				1DB4E10217B78CCF002AA933 /* KFOWMCoordinateModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

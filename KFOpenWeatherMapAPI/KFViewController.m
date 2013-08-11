@@ -39,11 +39,12 @@
         }
     }];
     
+    /*
     [self.apiClient forecastForCityName:@"Los Angeles" withResultBlock:^(BOOL success, id responseData, NSError *error)
      {
          if (success)
          {
-//             NSLog(@"received forecast: %@", responseData);
+             NSLog(@"received forecast: %@", responseData);
          }
          else
          {
@@ -55,13 +56,14 @@
     {
         if (success)
         {
-//            NSLog(@"received daily forecast: %@", responseData);
+            NSLog(@"received daily forecast: %@", responseData);
         }
         else
         {
             NSLog(@"could not get daily forecast: %@", error);
         }
     }];
+     */
 }
 
 

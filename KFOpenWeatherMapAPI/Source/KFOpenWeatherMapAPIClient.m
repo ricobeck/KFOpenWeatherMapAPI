@@ -48,57 +48,49 @@
 #pragma mark - API calls for current weather
 
 
+- (void)weatherForParams:(NSDictionary *)params withResultBlock:(KFOWMResultBlock)resultBlock
+{
+    [self getPath:@"weather" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
+    {
+        NSDictionary *responseDictionary = responseObject;
+        NSError *error = nil;
+        KFOWMResponseModel *responseModel = [[KFOWMResponseModel alloc] initWithDictionary:responseDictionary error:&error];
+         
+        if (error == nil)
+        {
+            resultBlock(YES, responseModel, nil);
+        }
+        else
+        {
+            resultBlock(YES, responseObject, error);
+        }
+         
+    }
+        failure:^(AFHTTPRequestOperation *operation, NSError *error)
+    {
+        resultBlock(NO, nil, error);
+    }];
+}
+
+
 - (void)weatherForCityName:(NSString *)city withResultBlock:(KFOWMResultBlock)resultBlock
 {
     NSDictionary *params = [self parametersWithDictionary:@{@"q": city}];
-    [self getPath:@"weather" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
-     {
-         NSDictionary *responseDictionary = responseObject;
-         NSError *error = nil;
-         KFOWMResponseModel *responseModel = [[KFOWMResponseModel alloc] initWithDictionary:responseDictionary error:&error];
-         
-         if (error == nil)
-         {
-             resultBlock(YES, responseModel, nil);
-         }
-         else
-         {
-             resultBlock(YES, responseObject, error);
-         }
-         
-     }
-          failure:^(AFHTTPRequestOperation *operation, NSError *error)
-     {
-         resultBlock(NO, nil, error);
-     }];
+    [self weatherForParams:params withResultBlock:resultBlock];
 }
 
 
 - (void)weatherForCityId:(NSString *)cityId withResultBlock:(KFOWMResultBlock)resultBlock
 {
     NSDictionary *params = [self parametersWithDictionary:@{@"id": cityId}];
-    [self getPath:@"weather" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
-     {
-         resultBlock(YES, responseObject, nil);
-     }
-          failure:^(AFHTTPRequestOperation *operation, NSError *error)
-     {
-         resultBlock(NO, nil, error);
-     }];
+    [self weatherForParams:params withResultBlock:resultBlock];
 }
 
 
 - (void)weatherForCoordinate:(CLLocationCoordinate2D)locationCoordinate withResultBlock:(KFOWMResultBlock)resultBlock
 {
     NSDictionary *params = [self parametersWithDictionary:@{@"lat": [NSString stringWithFormat:@"%f", locationCoordinate.latitude],@"lon": [NSString stringWithFormat:@"%f", locationCoordinate.longitude]}];
-    [self getPath:@"weather" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
-     {
-         resultBlock(YES, responseObject, nil);
-     }
-          failure:^(AFHTTPRequestOperation *operation, NSError *error)
-     {
-         resultBlock(NO, nil, error);
-     }];
+    [self weatherForParams:params withResultBlock:resultBlock];
 }
 
 

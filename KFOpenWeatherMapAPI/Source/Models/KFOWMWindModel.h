@@ -12,7 +12,7 @@
 
 @property (nonatomic, strong) NSNumber *speed;
 
-@property (nonatomic, strong) NSNumber *gust;
+@property (nonatomic, strong) NSNumber<Optional> *gust;
 
 @property (nonatomic, strong) NSNumber *deg;
 
