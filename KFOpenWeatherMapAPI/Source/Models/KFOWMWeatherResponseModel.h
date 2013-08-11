@@ -19,7 +19,7 @@
 @protocol KFOWMWeatherModel;
 
 
-@interface KFOWMResponseModel : JSONModel
+@interface KFOWMWeatherResponseModel : JSONModel
 
 
 @property (nonatomic, strong) NSDate *dt;

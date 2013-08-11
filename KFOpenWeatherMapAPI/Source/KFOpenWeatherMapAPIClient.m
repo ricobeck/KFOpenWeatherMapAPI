@@ -7,7 +7,8 @@
 //
 
 #import "KFOpenWeatherMapAPIClient.h"
-#import "KFOWMResponseModel.h"
+#import "KFOWMWeatherResponseModel.h"
+#import "KFOWMForecastResponseModel.h"
 
 #import <AFNetworking/AFNetworking.h>
 
@@ -54,7 +55,7 @@
     {
         NSDictionary *responseDictionary = responseObject;
         NSError *error = nil;
-        KFOWMResponseModel *responseModel = [[KFOWMResponseModel alloc] initWithDictionary:responseDictionary error:&error];
+        KFOWMWeatherResponseModel *responseModel = [[KFOWMWeatherResponseModel alloc] initWithDictionary:responseDictionary error:&error];
          
         if (error == nil)
         {
@@ -101,10 +102,21 @@
 {
     NSDictionary *params = [self parametersWithDictionary:@{@"q": city}];
     [self getPath:@"forecast" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
-     {
-         resultBlock(YES, responseObject, nil);
+    {
+        NSDictionary *responseDictionary = responseObject;
+        NSError *error = nil;
+        KFOWMForecastResponseModel *responseModel = [[KFOWMForecastResponseModel alloc] initWithDictionary:responseDictionary error:&error];
+         
+        if (error == nil)
+        {
+            resultBlock(YES, responseModel, nil);
+        }
+        else
+        {
+            resultBlock(YES, responseObject, error);
+        }
      }
-          failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     failure:^(AFHTTPRequestOperation *operation, NSError *error)
      {
          resultBlock(NO, nil, error);
      }];
