@@ -9,6 +9,7 @@
 #import "KFOpenWeatherMapAPIClient.h"
 #import "KFOWMWeatherResponseModel.h"
 #import "KFOWMForecastResponseModel.h"
+#import "KFOWMDailyForecastResponseModel.h"
 
 #import <AFNetworking/AFNetworking.h>
 
@@ -146,45 +147,49 @@
 #pragma mark - Daily forecast
 
 
+- (void)dailyForecastForParams:(NSDictionary *)params withResultBlock:(KFOWMResultBlock)resultBlock
+{
+    [self getPath:@"forecast/daily" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
+    {
+        NSDictionary *responseDictionary = responseObject;
+        NSError *error = nil;
+        KFOWMDailyForecastResponseModel *responseModel = [[KFOWMDailyForecastResponseModel alloc] initWithDictionary:responseDictionary error:&error];
+        
+        if (error == nil)
+        {
+            resultBlock(YES, responseModel, nil);
+        }
+        else
+        {
+            resultBlock(YES, responseObject, error);
+        }
+         
+    }
+    failure:^(AFHTTPRequestOperation *operation, NSError *error)
+    {
+        resultBlock(NO, nil, error);
+    }];
+}
+
+
 - (void)dailyForecastForCityName:(NSString *)city numberOfDays:(NSUInteger)days withResultBlock:(KFOWMResultBlock)resultBlock
 {
     NSDictionary *params = [self parametersWithDictionary:@{@"q": city, @"cnt": @(days)}];
-    [self getPath:@"forecast/daily" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
-     {
-         resultBlock(YES, responseObject, nil);
-     }
-          failure:^(AFHTTPRequestOperation *operation, NSError *error)
-     {
-         resultBlock(NO, nil, error);
-     }];
+    [self dailyForecastForParams:params withResultBlock:resultBlock];
 }
 
 
 - (void)dailyForecastForCityId:(NSString *)cityId numberOfDays:(NSUInteger)days withResultBlock:(KFOWMResultBlock)resultBlock
 {
     NSDictionary *params = [self parametersWithDictionary:@{@"id": cityId, @"cnt": @(days)}];
-    [self getPath:@"forecast/daily" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
-     {
-         resultBlock(YES, responseObject, nil);
-     }
-          failure:^(AFHTTPRequestOperation *operation, NSError *error)
-     {
-         resultBlock(NO, nil, error);
-     }];
+    [self dailyForecastForParams:params withResultBlock:resultBlock];
 }
 
 
 - (void)dailyForecastForCoordinate:(CLLocationCoordinate2D)locationCoordinate numberOfDays:(NSUInteger)days withResultBlock:(KFOWMResultBlock)resultBlock
 {
     NSDictionary *params = [self parametersWithDictionary:@{@"lat": [NSString stringWithFormat:@"%f", locationCoordinate.latitude],@"lon": [NSString stringWithFormat:@"%f", locationCoordinate.longitude], @"cnt": @(days)}];
-    [self getPath:@"forecast/daily" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
-     {
-         resultBlock(YES, responseObject, nil);
-     }
-          failure:^(AFHTTPRequestOperation *operation, NSError *error)
-     {
-         resultBlock(NO, nil, error);
-     }];
+    [self dailyForecastForParams:params withResultBlock:resultBlock];
 }
 
 

@@ -30,6 +30,9 @@
 		1DB4E10717B79705002AA933 /* KFOWMForecastResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E10617B79705002AA933 /* KFOWMForecastResponseModel.m */; };
 		1DB4E10A17B79851002AA933 /* KFOWMCityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E10917B79851002AA933 /* KFOWMCityModel.m */; };
 		1DB4E10D17B79B90002AA933 /* KFOWMForecastListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E10C17B79B90002AA933 /* KFOWMForecastListModel.m */; };
+		1DB4E11317B7B3ED002AA933 /* KFOWMDailyForecastResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E11217B7B3EC002AA933 /* KFOWMDailyForecastResponseModel.m */; };
+		1DB4E11617B7B46C002AA933 /* KFOWMDailyForecastListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E11517B7B46C002AA933 /* KFOWMDailyForecastListModel.m */; };
+		1DB4E11917B7C136002AA933 /* KFOWMForecastTemperatureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E11817B7C135002AA933 /* KFOWMForecastTemperatureModel.m */; };
 		AE6D16DF79A6459D9D7BB046 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2CC2DF8A7348C7BE79A933 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +78,12 @@
 		1DB4E10917B79851002AA933 /* KFOWMCityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFOWMCityModel.m; sourceTree = "<group>"; };
 		1DB4E10B17B79B90002AA933 /* KFOWMForecastListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFOWMForecastListModel.h; sourceTree = "<group>"; };
 		1DB4E10C17B79B90002AA933 /* KFOWMForecastListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFOWMForecastListModel.m; sourceTree = "<group>"; };
+		1DB4E11117B7B3EC002AA933 /* KFOWMDailyForecastResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFOWMDailyForecastResponseModel.h; sourceTree = "<group>"; };
+		1DB4E11217B7B3EC002AA933 /* KFOWMDailyForecastResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFOWMDailyForecastResponseModel.m; sourceTree = "<group>"; };
+		1DB4E11417B7B46C002AA933 /* KFOWMDailyForecastListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFOWMDailyForecastListModel.h; sourceTree = "<group>"; };
+		1DB4E11517B7B46C002AA933 /* KFOWMDailyForecastListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFOWMDailyForecastListModel.m; sourceTree = "<group>"; };
+		1DB4E11717B7C134002AA933 /* KFOWMForecastTemperatureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFOWMForecastTemperatureModel.h; sourceTree = "<group>"; };
+		1DB4E11817B7C135002AA933 /* KFOWMForecastTemperatureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFOWMForecastTemperatureModel.m; sourceTree = "<group>"; };
 		8E21B307C2664679BF1118BC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -182,6 +191,8 @@
 		1DB4E10317B796B2002AA933 /* Resource Responses */ = {
 			isa = PBXGroup;
 			children = (
+				1DB4E11117B7B3EC002AA933 /* KFOWMDailyForecastResponseModel.h */,
+				1DB4E11217B7B3EC002AA933 /* KFOWMDailyForecastResponseModel.m */,
 				1DB4E10517B79705002AA933 /* KFOWMForecastResponseModel.h */,
 				1DB4E10617B79705002AA933 /* KFOWMForecastResponseModel.m */,
 				1DB4E0E717B6E125002AA933 /* KFOWMWeatherResponseModel.h */,
@@ -199,8 +210,12 @@
 				1DB4E0FB17B78462002AA933 /* KFOWMCloudModel.m */,
 				1DB4E10017B78CCF002AA933 /* KFOWMCoordinateModel.h */,
 				1DB4E10117B78CCF002AA933 /* KFOWMCoordinateModel.m */,
+				1DB4E11417B7B46C002AA933 /* KFOWMDailyForecastListModel.h */,
+				1DB4E11517B7B46C002AA933 /* KFOWMDailyForecastListModel.m */,
 				1DB4E10B17B79B90002AA933 /* KFOWMForecastListModel.h */,
 				1DB4E10C17B79B90002AA933 /* KFOWMForecastListModel.m */,
+				1DB4E11717B7C134002AA933 /* KFOWMForecastTemperatureModel.h */,
+				1DB4E11817B7C135002AA933 /* KFOWMForecastTemperatureModel.m */,
 				1DB4E0EE17B6E5BC002AA933 /* KFOWMMainWeatherModel.h */,
 				1DB4E0EF17B6E5BC002AA933 /* KFOWMMainWeatherModel.m */,
 				1DB4E0F717B782C4002AA933 /* KFOWMSystemModel.h */,
@@ -330,6 +345,9 @@
 				1DB4E10717B79705002AA933 /* KFOWMForecastResponseModel.m in Sources */,
 				1DB4E10A17B79851002AA933 /* KFOWMCityModel.m in Sources */,
 				1DB4E10D17B79B90002AA933 /* KFOWMForecastListModel.m in Sources */,
+				1DB4E11317B7B3ED002AA933 /* KFOWMDailyForecastResponseModel.m in Sources */,
+				1DB4E11617B7B46C002AA933 /* KFOWMDailyForecastListModel.m in Sources */,
+				1DB4E11917B7C136002AA933 /* KFOWMForecastTemperatureModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,7 +27,6 @@
     
     self.apiClient = [[KFOpenWeatherMapAPIClient alloc] initWithAPIKey:@"1111111111" andAPIVersion:@"2.5"];
     
-    /*
     [self.apiClient weatherForCityName:@"Los Angeles" withResultBlock:^(BOOL success, id responseData, NSError *error)
     {
         if (success)
@@ -39,7 +38,7 @@
             NSLog(@"could not get weather: %@", error);
         }
     }];
-     */
+     
     
     [self.apiClient forecastForCityName:@"Los Angeles" withResultBlock:^(BOOL success, id responseData, NSError *error)
      {
@@ -53,7 +52,7 @@
          }
      }];
     
-    /*
+
     [self.apiClient dailyForecastForCityName:@"Los Angeles" numberOfDays:4 withResultBlock:^(BOOL success, id responseData, NSError *error)
     {
         if (success)
@@ -65,7 +64,6 @@
             NSLog(@"could not get daily forecast: %@", error);
         }
     }];
-     */
 }
 
 
