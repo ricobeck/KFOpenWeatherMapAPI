@@ -9,6 +9,7 @@
 #import "KFOpenWeatherMapAPIClient.h"
 #import "KFOWMWeatherResponseModel.h"
 #import "KFOWMForecastResponseModel.h"
+#import "KFOWMDailyForecastResponseModel.h"
 
 #import <AFNetworking/AFNetworking.h>
 
@@ -151,7 +152,18 @@
     NSDictionary *params = [self parametersWithDictionary:@{@"q": city, @"cnt": @(days)}];
     [self getPath:@"forecast/daily" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
-         resultBlock(YES, responseObject, nil);
+         NSDictionary *responseDictionary = responseObject;
+         NSError *error = nil;
+         KFOWMDailyForecastResponseModel *responseModel = [[KFOWMDailyForecastResponseModel alloc] initWithDictionary:responseDictionary error:&error];
+         
+         if (error == nil)
+         {
+             resultBlock(YES, responseModel, nil);
+         }
+         else
+         {
+             resultBlock(YES, responseObject, error);
+         }
      }
           failure:^(AFHTTPRequestOperation *operation, NSError *error)
      {
