@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 KF Interactive. All rights reserved.
 //
 
-#import "KFOWMResponseModel.h"
+#import "KFOWMWeatherResponseModel.h"
 
-@implementation KFOWMResponseModel
+@implementation KFOWMWeatherResponseModel
 
 
 + (JSONKeyMapper *)keyMapper

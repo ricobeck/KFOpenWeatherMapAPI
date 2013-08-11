@@ -13,13 +13,17 @@
 
 @property (nonatomic, strong) NSNumber *temperature;
 
-@property (nonatomic, strong) NSNumber *humidity;
-
-@property (nonatomic, strong) NSNumber *pressure;
-
 @property (nonatomic, strong) NSNumber *temperatureMin;
 
 @property (nonatomic, strong) NSNumber *temperatureMax;
+
+@property (nonatomic, strong) NSNumber *pressure;
+
+@property (nonatomic, strong) NSNumber<Optional> *pressureSeaLevel;
+
+@property (nonatomic, strong) NSNumber<Optional> *pressureGroundLevel;
+
+@property (nonatomic, strong) NSNumber *humidity;
 
 
 @end

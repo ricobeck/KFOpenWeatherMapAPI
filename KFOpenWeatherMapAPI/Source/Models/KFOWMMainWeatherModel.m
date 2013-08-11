@@ -13,7 +13,7 @@
 
 + (JSONKeyMapper *)keyMapper
 {
-    return [[JSONKeyMapper alloc] initWithDictionary:@{@"temp" : @"temperature", @"temp_min" : @"temperatureMin", @"temp_max": @"temperatureMax"}];
+    return [[JSONKeyMapper alloc] initWithDictionary:@{@"temp" : @"temperature", @"temp_min" : @"temperatureMin", @"temp_max": @"temperatureMax", @"sea_level" : @"pressureSeaLevel", @"grnd_level" : @"pressureGroundLevel"}];
 }
 
 

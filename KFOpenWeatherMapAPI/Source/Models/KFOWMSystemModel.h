@@ -11,11 +11,12 @@
 @interface KFOWMSystemModel : JSONModel
 
 
-@property (nonatomic, strong) NSString *country;
+@property (nonatomic, strong) NSString<Optional> *country;
 
-@property (nonatomic, strong) NSDate *sunrise;
+@property (nonatomic, strong) NSDate<Optional> *sunrise;
 
-@property (nonatomic, strong) NSDate *sunset;
+@property (nonatomic, strong) NSDate<Optional> *sunset;
 
+@property (nonatomic, strong) NSString<Optional> *pod;
 
 @end
