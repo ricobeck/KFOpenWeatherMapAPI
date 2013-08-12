@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		1DEB50AA17B8F0D0000495AC /* Documentation */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 1DEB50AB17B8F0D0000495AC /* Build configuration list for PBXAggregateTarget "Documentation" */;
+			buildPhases = (
+				1DEB50AE17B8F0D6000495AC /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Documentation;
+			productName = Documentation;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		1DB4E0C017B66904002AA933 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DB4E0BF17B66904002AA933 /* UIKit.framework */; };
 		1DB4E0C217B66904002AA933 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DB4E0C117B66904002AA933 /* Foundation.framework */; };
@@ -278,6 +292,7 @@
 			projectRoot = "";
 			targets = (
 				1DB4E0BB17B66904002AA933 /* KFOpenWeatherMapAPI */,
+				1DEB50AA17B8F0D0000495AC /* Documentation */,
 			);
 		};
 /* End PBXProject section */
@@ -298,6 +313,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1DEB50AE17B8F0D6000495AC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/appledoc \\\n--project-name \"KFOpenWeatherMapAPI\" \\\n--project-company \"KF Interactive\" \\\n--company-id \"com.kfinteractive\" \\\n--docset-atom-filename \"openweathermap.kfinteractive.atom\" \\\n--docset-feed-url \"http://docs.kf-interactive.com/owm/%DOCSETATOMFILENAME\" \\\n--docset-package-url \"http://docs.kf-interactive.com/owm/%DOCSETPACKAGEFILENAME\" \\\n--docset-fallback-url \"http://docs.kf-interactive.com/owm\" \\\n--no-install-docset \\\n--output \"docs\" \\\n--publish-docset \\\n--logformat xcode \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--merge-categories \\\n--ignore \"*.m\" \\\n--ignore Pods \\\n--ignore Frameworks \\\n\"${PROJECT_DIR}/KFOpenWeatherMapAPI/Source\"";
+		};
 		9B84F438689843838BF0921F /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -459,6 +487,20 @@
 			};
 			name = Release;
 		};
+		1DEB50AC17B8F0D0000495AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1DEB50AD17B8F0D0000495AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -479,6 +521,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		1DEB50AB17B8F0D0000495AC /* Build configuration list for PBXAggregateTarget "Documentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB50AC17B8F0D0000495AC /* Debug */,
+				1DEB50AD17B8F0D0000495AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

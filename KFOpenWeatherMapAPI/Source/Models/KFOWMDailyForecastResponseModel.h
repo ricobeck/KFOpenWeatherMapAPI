@@ -12,18 +12,36 @@
 
 @protocol KFOWMDailyForecastListModel;
 
-
+/**
+ *  A model representing the response of the daily forecast resource.
+ */
 @interface KFOWMDailyForecastResponseModel : JSONModel
 
 
+/**
+ *  The response code of the request.
+ */
 @property (nonatomic) NSUInteger responseCode;
 
+/**
+ *  A returned message from the api. Currently it looks like the net request time.
+ */
 @property (nonatomic) NSString *message;
 
-@property (nonatomic) NSInteger cnt;
+/**
+ *  The number of returned days.
+ */
+@property (nonatomic) NSInteger count;
 
+/**
+ *  A `KFOWMCityModel` containing additional information about the requested city.
+ */
 @property (nonatomic, strong) KFOWMCityModel *city;
 
+
+/**
+ *  A list of `KFOWMDailyForecastListModel`.
+ */
 @property (nonatomic, strong) NSArray<KFOWMDailyForecastListModel> *list;
 
 

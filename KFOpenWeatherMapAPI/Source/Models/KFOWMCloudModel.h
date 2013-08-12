@@ -8,10 +8,15 @@
 
 #import "JSONModel.h"
 
-
+/**
+ *  The current cloud situation of an location.
+ */
 @interface KFOWMCloudModel : JSONModel
 
 
+/**
+ *  The value of coverage.
+ */
 @property (nonatomic) NSUInteger all;
 
 

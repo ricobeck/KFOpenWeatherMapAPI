@@ -13,7 +13,7 @@
 
 + (JSONKeyMapper *)keyMapper
 {
-    return [[JSONKeyMapper alloc] initWithDictionary:@{@"cod" : @"responseCode"}];
+    return [[JSONKeyMapper alloc] initWithDictionary:@{@"cod" : @"responseCode", @"cnt" : @"count"}];
 }
 
 
