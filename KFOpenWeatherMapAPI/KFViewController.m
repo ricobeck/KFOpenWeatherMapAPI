@@ -64,6 +64,18 @@
             NSLog(@"could not get daily forecast: %@", error);
         }
     }];
+    
+    [self.apiClient searchForPhrase:@"Lond" numberOfResults:10 withResultBlock:^(BOOL success, id responseData, NSError *error)
+     {
+         if (success)
+         {
+             NSLog(@"search results: %@", responseData);
+         }
+         else
+         {
+             NSLog(@"could not get search results: %@", error);
+         }
+     }];
 }
 
 
