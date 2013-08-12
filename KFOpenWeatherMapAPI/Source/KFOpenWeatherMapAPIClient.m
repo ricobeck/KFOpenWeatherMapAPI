@@ -10,6 +10,7 @@
 #import "KFOWMWeatherResponseModel.h"
 #import "KFOWMForecastResponseModel.h"
 #import "KFOWMDailyForecastResponseModel.h"
+#import "KFOWMSearchResponseModel.h"
 
 #import <AFNetworking/AFNetworking.h>
 
@@ -64,7 +65,7 @@
         }
         else
         {
-            resultBlock(YES, responseObject, error);
+            resultBlock(NO, responseObject, error);
         }
          
     }
@@ -113,7 +114,7 @@
          }
          else
          {
-             resultBlock(YES, responseObject, error);
+             resultBlock(NO, responseObject, error);
          }
          
      }
@@ -161,7 +162,7 @@
         }
         else
         {
-            resultBlock(YES, responseObject, error);
+            resultBlock(NO, responseObject, error);
         }
          
     }
@@ -190,6 +191,35 @@
 {
     NSDictionary *params = [self parametersWithDictionary:@{@"lat": [NSString stringWithFormat:@"%f", locationCoordinate.latitude],@"lon": [NSString stringWithFormat:@"%f", locationCoordinate.longitude], @"cnt": @(days)}];
     [self dailyForecastForParams:params withResultBlock:resultBlock];
+}
+
+
+#pragma mark - Search
+
+
+- (void)searchForPhrase:(NSString *)phrase numberOfResults:(NSUInteger)results withResultBlock:(KFOWMResultBlock)resultBlock
+{
+    NSDictionary *params = [self parametersWithDictionary:@{@"q": phrase, @"cnt": @(results)}];
+    [self getPath:@"find" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         NSDictionary *responseDictionary = responseObject;
+         NSError *error = nil;
+         KFOWMSearchResponseModel *responseModel = [[KFOWMSearchResponseModel alloc] initWithDictionary:responseDictionary error:&error];
+         
+         if (error == nil)
+         {
+             resultBlock(YES, responseModel, nil);
+         }
+         else
+         {
+             resultBlock(NO, responseObject, error);
+         }
+         
+     }
+          failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         resultBlock(NO, nil, error);
+     }];
 }
 
 
