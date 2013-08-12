@@ -62,6 +62,8 @@ typedef NS_ENUM(NSUInteger, KFOWMMUnitType)
 - (void)dailyForecastForCoordinate:(CLLocationCoordinate2D)locationCoordinate numberOfDays:(NSUInteger)days withResultBlock:(KFOWMResultBlock)resultBlock;
 
 
+- (void)searchForPhrase:(NSString *)phrase numberOfResults:(NSUInteger)results withResultBlock:(KFOWMResultBlock)resultBlock;
+
 
 
 

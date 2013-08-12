@@ -30,9 +30,9 @@
 
 @property (nonatomic) KFOWMCoordinateModel *coord;
 
-@property (nonatomic, strong) NSString *base;
+@property (nonatomic, strong) NSString<Optional> *base;
 
-@property (nonatomic) NSUInteger responseCode;
+@property (nonatomic) NSNumber<Optional> *responseCode;
 
 @property (nonatomic, strong) KFOWMMainWeatherModel *mainWeather;
 
