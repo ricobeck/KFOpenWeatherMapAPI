@@ -48,7 +48,7 @@
 }
 
 
-#pragma mark - API calls for current weather
+#pragma mark - Current weather
 
 
 - (void)weatherForParams:(NSDictionary *)params withResultBlock:(KFOWMResultBlock)resultBlock
@@ -97,7 +97,7 @@
 }
 
 
-#pragma mark - 3 hour forecast
+#pragma mark - 3-hour interval forecast
 
 
 - (void)forecastForParams:(NSDictionary *)params withResultBlock:(KFOWMResultBlock)resultBlock
