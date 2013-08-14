@@ -51,6 +51,12 @@
 
 
 /**
+ *  The amount of rain.
+ */
+@property (nonatomic, strong) NSNumber<Optional> *rain;
+
+
+/**
  *  The wind speed.
  */
 @property (nonatomic, strong) NSNumber *windSpeed;

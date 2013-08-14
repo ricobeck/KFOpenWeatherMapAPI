@@ -48,6 +48,7 @@
 		1DB4E11617B7B46C002AA933 /* KFOWMDailyForecastListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E11517B7B46C002AA933 /* KFOWMDailyForecastListModel.m */; };
 		1DB4E11917B7C136002AA933 /* KFOWMForecastTemperatureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E11817B7C135002AA933 /* KFOWMForecastTemperatureModel.m */; };
 		1DB4E11C17B8C1F8002AA933 /* KFOWMSearchResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E11B17B8C1F8002AA933 /* KFOWMSearchResponseModel.m */; };
+		1DDCD7C717BC265300154229 /* KFOWMRainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDCD7C617BC265300154229 /* KFOWMRainModel.m */; };
 		AE6D16DF79A6459D9D7BB046 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2CC2DF8A7348C7BE79A933 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +102,8 @@
 		1DB4E11817B7C135002AA933 /* KFOWMForecastTemperatureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFOWMForecastTemperatureModel.m; sourceTree = "<group>"; };
 		1DB4E11A17B8C1F8002AA933 /* KFOWMSearchResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFOWMSearchResponseModel.h; sourceTree = "<group>"; };
 		1DB4E11B17B8C1F8002AA933 /* KFOWMSearchResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFOWMSearchResponseModel.m; sourceTree = "<group>"; };
+		1DDCD7C517BC265300154229 /* KFOWMRainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFOWMRainModel.h; sourceTree = "<group>"; };
+		1DDCD7C617BC265300154229 /* KFOWMRainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFOWMRainModel.m; sourceTree = "<group>"; };
 		8E21B307C2664679BF1118BC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -237,6 +240,8 @@
 				1DB4E11817B7C135002AA933 /* KFOWMForecastTemperatureModel.m */,
 				1DB4E0EE17B6E5BC002AA933 /* KFOWMMainWeatherModel.h */,
 				1DB4E0EF17B6E5BC002AA933 /* KFOWMMainWeatherModel.m */,
+				1DDCD7C517BC265300154229 /* KFOWMRainModel.h */,
+				1DDCD7C617BC265300154229 /* KFOWMRainModel.m */,
 				1DB4E0F717B782C4002AA933 /* KFOWMSystemModel.h */,
 				1DB4E0F817B782C4002AA933 /* KFOWMSystemModel.m */,
 				1DB4E0F417B77EB7002AA933 /* KFOWMWeatherModel.h */,
@@ -382,6 +387,7 @@
 				1DB4E11617B7B46C002AA933 /* KFOWMDailyForecastListModel.m in Sources */,
 				1DB4E11917B7C136002AA933 /* KFOWMForecastTemperatureModel.m in Sources */,
 				1DB4E11C17B8C1F8002AA933 /* KFOWMSearchResponseModel.m in Sources */,
+				1DDCD7C717BC265300154229 /* KFOWMRainModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +535,7 @@
 				1DEB50AD17B8F0D0000495AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
