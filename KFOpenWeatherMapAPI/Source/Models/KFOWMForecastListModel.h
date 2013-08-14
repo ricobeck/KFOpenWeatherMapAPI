@@ -34,6 +34,7 @@
 @class KFOWMCloudModel;
 @class KFOWMWindModel;
 @class KFOWMSystemModel;
+@class KFOWMRainModel;
 
 @protocol  KFOWMWeatherModel;
 
@@ -61,6 +62,11 @@
  */
 @property (nonatomic, strong) NSArray<KFOWMWeatherModel> *weather;
 
+
+/**
+ *  The expected rain.
+ */
+@property (nonatomic, strong) KFOWMRainModel<Optional> *rain;
 
 /**
  *  The cloud status
