@@ -31,6 +31,7 @@
 @class KFOWMSystemModel;
 @class KFOWMCloudModel;
 @class KFOWMCoordinateModel;
+@class KFOWMRainModel;
 
 
 @protocol KFOWMWeatherModel;
@@ -80,6 +81,12 @@
  *  The main weather conditions.
  */
 @property (nonatomic, strong) KFOWMMainWeatherModel *mainWeather;
+
+
+/**
+ *  The expected rain. 
+ */
+@property (nonatomic, strong) KFOWMRainModel<Optional> *rain;
 
 
 /**
