@@ -49,7 +49,14 @@
 		1DB4E11917B7C136002AA933 /* KFOWMForecastTemperatureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E11817B7C135002AA933 /* KFOWMForecastTemperatureModel.m */; };
 		1DB4E11C17B8C1F8002AA933 /* KFOWMSearchResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E11B17B8C1F8002AA933 /* KFOWMSearchResponseModel.m */; };
 		1DDCD7C717BC265300154229 /* KFOWMRainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDCD7C617BC265300154229 /* KFOWMRainModel.m */; };
+		1DDCD80517BD638D00154229 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DDCD80417BD638D00154229 /* Cocoa.framework */; };
+		1DDCD80F17BD638D00154229 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DDCD80D17BD638D00154229 /* InfoPlist.strings */; };
+		1DDCD81117BD638D00154229 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDCD81017BD638D00154229 /* main.m */; };
+		1DDCD81517BD638D00154229 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1DDCD81317BD638D00154229 /* Credits.rtf */; };
+		1DDCD81817BD638D00154229 /* KFOSXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDCD81717BD638D00154229 /* KFOSXAppDelegate.m */; };
+		1DDCD81B17BD638D00154229 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDCD81917BD638D00154229 /* MainMenu.xib */; };
 		AE6D16DF79A6459D9D7BB046 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2CC2DF8A7348C7BE79A933 /* libPods.a */; };
+		E3A1EFDE30094B54A3DB9494 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2CC2DF8A7348C7BE79A933 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +111,19 @@
 		1DB4E11B17B8C1F8002AA933 /* KFOWMSearchResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFOWMSearchResponseModel.m; sourceTree = "<group>"; };
 		1DDCD7C517BC265300154229 /* KFOWMRainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFOWMRainModel.h; sourceTree = "<group>"; };
 		1DDCD7C617BC265300154229 /* KFOWMRainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFOWMRainModel.m; sourceTree = "<group>"; };
+		1DDCD80317BD638D00154229 /* OSXExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSXExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DDCD80417BD638D00154229 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		1DDCD80717BD638D00154229 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		1DDCD80817BD638D00154229 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1DDCD80917BD638D00154229 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1DDCD80C17BD638D00154229 /* OSXExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OSXExample-Info.plist"; sourceTree = "<group>"; };
+		1DDCD80E17BD638D00154229 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1DDCD81017BD638D00154229 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1DDCD81217BD638D00154229 /* OSXExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OSXExample-Prefix.pch"; sourceTree = "<group>"; };
+		1DDCD81417BD638D00154229 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		1DDCD81617BD638D00154229 /* KFOSXAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KFOSXAppDelegate.h; sourceTree = "<group>"; };
+		1DDCD81717BD638D00154229 /* KFOSXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KFOSXAppDelegate.m; sourceTree = "<group>"; };
+		1DDCD81A17BD638D00154229 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		8E21B307C2664679BF1118BC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -119,6 +139,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1DDCD80017BD638D00154229 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DDCD80517BD638D00154229 /* Cocoa.framework in Frameworks */,
+				E3A1EFDE30094B54A3DB9494 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -126,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				1DB4E0C517B66904002AA933 /* KFOpenWeatherMapAPI */,
+				1DDCD80A17BD638D00154229 /* OSXExample */,
 				1DB4E0BE17B66904002AA933 /* Frameworks */,
 				1DB4E0BD17B66904002AA933 /* Products */,
 				8E21B307C2664679BF1118BC /* Pods.xcconfig */,
@@ -136,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				1DB4E0BC17B66904002AA933 /* KFOpenWeatherMapAPI.app */,
+				1DDCD80317BD638D00154229 /* OSXExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,6 +178,8 @@
 				1DB4E0C117B66904002AA933 /* Foundation.framework */,
 				1DB4E0C317B66904002AA933 /* CoreGraphics.framework */,
 				0B2CC2DF8A7348C7BE79A933 /* libPods.a */,
+				1DDCD80417BD638D00154229 /* Cocoa.framework */,
+				1DDCD80617BD638D00154229 /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -252,6 +285,39 @@
 			name = Submodels;
 			sourceTree = "<group>";
 		};
+		1DDCD80617BD638D00154229 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DDCD80717BD638D00154229 /* AppKit.framework */,
+				1DDCD80817BD638D00154229 /* CoreData.framework */,
+				1DDCD80917BD638D00154229 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		1DDCD80A17BD638D00154229 /* OSXExample */ = {
+			isa = PBXGroup;
+			children = (
+				1DDCD81617BD638D00154229 /* KFOSXAppDelegate.h */,
+				1DDCD81717BD638D00154229 /* KFOSXAppDelegate.m */,
+				1DDCD81917BD638D00154229 /* MainMenu.xib */,
+				1DDCD80B17BD638D00154229 /* Supporting Files */,
+			);
+			path = OSXExample;
+			sourceTree = "<group>";
+		};
+		1DDCD80B17BD638D00154229 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1DDCD80C17BD638D00154229 /* OSXExample-Info.plist */,
+				1DDCD80D17BD638D00154229 /* InfoPlist.strings */,
+				1DDCD81017BD638D00154229 /* main.m */,
+				1DDCD81217BD638D00154229 /* OSXExample-Prefix.pch */,
+				1DDCD81317BD638D00154229 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -272,6 +338,25 @@
 			name = KFOpenWeatherMapAPI;
 			productName = KFOpenWeatherMapAPI;
 			productReference = 1DB4E0BC17B66904002AA933 /* KFOpenWeatherMapAPI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1DDCD80217BD638D00154229 /* OSXExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DDCD81E17BD638D00154229 /* Build configuration list for PBXNativeTarget "OSXExample" */;
+			buildPhases = (
+				386E4F29B04A433E93F56351 /* Check Pods Manifest.lock */,
+				1DDCD7FF17BD638D00154229 /* Sources */,
+				1DDCD80017BD638D00154229 /* Frameworks */,
+				1DDCD80117BD638D00154229 /* Resources */,
+				BBD099DB33244D5EAF8BEACD /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OSXExample;
+			productName = OSXExample;
+			productReference = 1DDCD80317BD638D00154229 /* OSXExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -298,6 +383,7 @@
 			targets = (
 				1DB4E0BB17B66904002AA933 /* KFOpenWeatherMapAPI */,
 				1DEB50AA17B8F0D0000495AC /* Documentation */,
+				1DDCD80217BD638D00154229 /* OSXExample */,
 			);
 		};
 /* End PBXProject section */
@@ -312,6 +398,16 @@
 				1DB4E0D417B66904002AA933 /* Default@2x.png in Resources */,
 				1DB4E0D617B66904002AA933 /* Default-568h@2x.png in Resources */,
 				1DB4E0D917B66904002AA933 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DDCD80117BD638D00154229 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DDCD80F17BD638D00154229 /* InfoPlist.strings in Resources */,
+				1DDCD81517BD638D00154229 /* Credits.rtf in Resources */,
+				1DDCD81B17BD638D00154229 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +427,21 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/appledoc \\\n--project-name \"KFOpenWeatherMapAPI\" \\\n--project-company \"KF Interactive\" \\\n--company-id \"com.kfinteractive\" \\\n--docset-atom-filename \"openweathermap.kfinteractive.atom\" \\\n--docset-feed-url \"http://docs.kf-interactive.com/owm/%DOCSETATOMFILENAME\" \\\n--docset-package-url \"http://docs.kf-interactive.com/owm/%DOCSETPACKAGEFILENAME\" \\\n--docset-fallback-url \"http://docs.kf-interactive.com/owm\" \\\n--no-install-docset \\\n--output \"docs\" \\\n--publish-docset \\\n--logformat xcode \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--merge-categories \\\n--ignore \"*.m\" \\\n--ignore Pods \\\n--ignore Frameworks \\\n\"${PROJECT_DIR}/KFOpenWeatherMapAPI/Source\"";
 		};
+		386E4F29B04A433E93F56351 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		9B84F438689843838BF0921F /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -344,6 +455,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BBD099DB33244D5EAF8BEACD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E1D99A861D984E0AA4888EEB /* Copy Pods Resources */ = {
@@ -391,6 +517,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1DDCD7FF17BD638D00154229 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DDCD81117BD638D00154229 /* main.m in Sources */,
+				1DDCD81817BD638D00154229 /* KFOSXAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -408,6 +543,30 @@
 				1DB4E0D817B66904002AA933 /* en */,
 			);
 			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		1DDCD80D17BD638D00154229 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDCD80E17BD638D00154229 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1DDCD81317BD638D00154229 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDCD81417BD638D00154229 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		1DDCD81917BD638D00154229 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDCD81A17BD638D00154229 /* en */,
+			);
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -493,6 +652,51 @@
 			};
 			name = Release;
 		};
+		1DDCD81C17BD638D00154229 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E21B307C2664679BF1118BC /* Pods.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OSXExample/OSXExample-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "OSXExample/OSXExample-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1DDCD81D17BD638D00154229 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E21B307C2664679BF1118BC /* Pods.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OSXExample/OSXExample-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "OSXExample/OSXExample-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		1DEB50AC17B8F0D0000495AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -524,6 +728,15 @@
 			buildConfigurations = (
 				1DB4E0E017B66904002AA933 /* Debug */,
 				1DB4E0E117B66904002AA933 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DDCD81E17BD638D00154229 /* Build configuration list for PBXNativeTarget "OSXExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DDCD81C17BD638D00154229 /* Debug */,
+				1DDCD81D17BD638D00154229 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
