@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "KFOpenWeatherMapAPI"
-  s.version      = "0.2.0"
+  s.version      = "0.2.1"
   s.summary      = "an OpenWeatherMap API Client"
 
   s.description  = <<-DESC
