@@ -60,7 +60,7 @@
 /**
  *  The number of inhabitants.
  */
-@property (nonatomic) NSUInteger population;
+@property (nonatomic) NSInteger population;
 
 
 @end

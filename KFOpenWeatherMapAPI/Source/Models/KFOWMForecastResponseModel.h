@@ -38,7 +38,7 @@
 /**
  *  The response code of the request
  */
-@property (nonatomic) NSUInteger responseCode;
+@property (nonatomic) NSInteger responseCode;
 
 
 /**

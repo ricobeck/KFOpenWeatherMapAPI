@@ -34,7 +34,7 @@
 /**
  *  The value of coverage.
  */
-@property (nonatomic) NSUInteger all;
+@property (nonatomic) NSInteger all;
 
 
 @end
