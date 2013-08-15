@@ -1,11 +1,11 @@
-#KFOpenWeatherMapAPI Client
+#KFOpenWeatherMapAPI Client for iOS and OSX
 
 A client connecting to the OpenWeatherMap API for fetching current weather data, interval/daily forecasts, and searching cities.
 
-#Usage
+#Installation
 Add
 ```
-pod KFOpenWeatherMapAPI
+pod 'KFOpenWeatherMapAPI'
 ```
 to your podfile and run
 ```
@@ -20,7 +20,7 @@ self.apiClient = [[KFOpenWeatherMapAPIClient alloc] initWithAPIKey:@"1111111111"
 for a full documentation see http://docs.kf-interactive.com/KFOpenWeatherMapAPI
 
 You can request weather data for a city by its name, its OpenWeatherMap city id, or by its geo location. For more acurate results you can 
-#Examples
+#Usage
 ##Current Weather
 For requesting the current weather for Los Angeles use:
 ```obj-c
@@ -110,4 +110,6 @@ that will result in a `KFOWMSearchResponseModel`:
 This code is distributed under the terms and conditions of the MIT license.
 
 #Author
-Rico Becker -> @ricobeck
+Rico Becker  
+@ricobeck  
+<https://twitter.com/ricobeck>
