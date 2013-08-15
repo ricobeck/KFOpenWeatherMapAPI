@@ -35,7 +35,7 @@
 /**
  *  The response code of the request
  */
-@property (nonatomic) NSUInteger responseCode;
+@property (nonatomic) NSInteger responseCode;
 
 /**
  *  A returned message from the api. Currently it looks like the net request time.
