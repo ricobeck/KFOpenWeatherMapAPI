@@ -55,6 +55,23 @@
 		1DDCD81517BD638D00154229 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1DDCD81317BD638D00154229 /* Credits.rtf */; };
 		1DDCD81817BD638D00154229 /* KFOSXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDCD81717BD638D00154229 /* KFOSXAppDelegate.m */; };
 		1DDCD81B17BD638D00154229 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDCD81917BD638D00154229 /* MainMenu.xib */; };
+		1DFA3FD217BD654700A3D8E1 /* KFOpenWeatherMapAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E0E417B69DA5002AA933 /* KFOpenWeatherMapAPIClient.m */; };
+		1DFA3FD317BD655400A3D8E1 /* JSONValueTransformer+Timestamp.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E0EC17B6E3D3002AA933 /* JSONValueTransformer+Timestamp.m */; };
+		1DFA3FD417BD655C00A3D8E1 /* KFOWMDailyForecastResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E11217B7B3EC002AA933 /* KFOWMDailyForecastResponseModel.m */; };
+		1DFA3FD517BD655C00A3D8E1 /* KFOWMForecastResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E10617B79705002AA933 /* KFOWMForecastResponseModel.m */; };
+		1DFA3FD617BD655C00A3D8E1 /* KFOWMWeatherResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E0E817B6E125002AA933 /* KFOWMWeatherResponseModel.m */; };
+		1DFA3FD717BD655C00A3D8E1 /* KFOWMSearchResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E11B17B8C1F8002AA933 /* KFOWMSearchResponseModel.m */; };
+		1DFA3FD817BD656D00A3D8E1 /* KFOWMCityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E10917B79851002AA933 /* KFOWMCityModel.m */; };
+		1DFA3FD917BD656D00A3D8E1 /* KFOWMCloudModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E0FB17B78462002AA933 /* KFOWMCloudModel.m */; };
+		1DFA3FDA17BD656D00A3D8E1 /* KFOWMCoordinateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E10117B78CCF002AA933 /* KFOWMCoordinateModel.m */; };
+		1DFA3FDB17BD656D00A3D8E1 /* KFOWMDailyForecastListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E11517B7B46C002AA933 /* KFOWMDailyForecastListModel.m */; };
+		1DFA3FDC17BD656D00A3D8E1 /* KFOWMForecastListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E10C17B79B90002AA933 /* KFOWMForecastListModel.m */; };
+		1DFA3FDD17BD656D00A3D8E1 /* KFOWMForecastTemperatureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E11817B7C135002AA933 /* KFOWMForecastTemperatureModel.m */; };
+		1DFA3FDE17BD656D00A3D8E1 /* KFOWMMainWeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E0EF17B6E5BC002AA933 /* KFOWMMainWeatherModel.m */; };
+		1DFA3FDF17BD656D00A3D8E1 /* KFOWMRainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDCD7C617BC265300154229 /* KFOWMRainModel.m */; };
+		1DFA3FE017BD656D00A3D8E1 /* KFOWMSystemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E0F817B782C4002AA933 /* KFOWMSystemModel.m */; };
+		1DFA3FE117BD656D00A3D8E1 /* KFOWMWeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E0F517B77EB7002AA933 /* KFOWMWeatherModel.m */; };
+		1DFA3FE217BD656D00A3D8E1 /* KFOWMWindModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB4E0F217B6E6D1002AA933 /* KFOWMWindModel.m */; };
 		AE6D16DF79A6459D9D7BB046 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2CC2DF8A7348C7BE79A933 /* libPods.a */; };
 		E3A1EFDE30094B54A3DB9494 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2CC2DF8A7348C7BE79A933 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -523,6 +540,23 @@
 			files = (
 				1DDCD81117BD638D00154229 /* main.m in Sources */,
 				1DDCD81817BD638D00154229 /* KFOSXAppDelegate.m in Sources */,
+				1DFA3FD217BD654700A3D8E1 /* KFOpenWeatherMapAPIClient.m in Sources */,
+				1DFA3FD317BD655400A3D8E1 /* JSONValueTransformer+Timestamp.m in Sources */,
+				1DFA3FD417BD655C00A3D8E1 /* KFOWMDailyForecastResponseModel.m in Sources */,
+				1DFA3FD517BD655C00A3D8E1 /* KFOWMForecastResponseModel.m in Sources */,
+				1DFA3FD617BD655C00A3D8E1 /* KFOWMWeatherResponseModel.m in Sources */,
+				1DFA3FD717BD655C00A3D8E1 /* KFOWMSearchResponseModel.m in Sources */,
+				1DFA3FD817BD656D00A3D8E1 /* KFOWMCityModel.m in Sources */,
+				1DFA3FD917BD656D00A3D8E1 /* KFOWMCloudModel.m in Sources */,
+				1DFA3FDA17BD656D00A3D8E1 /* KFOWMCoordinateModel.m in Sources */,
+				1DFA3FDB17BD656D00A3D8E1 /* KFOWMDailyForecastListModel.m in Sources */,
+				1DFA3FDC17BD656D00A3D8E1 /* KFOWMForecastListModel.m in Sources */,
+				1DFA3FDD17BD656D00A3D8E1 /* KFOWMForecastTemperatureModel.m in Sources */,
+				1DFA3FDE17BD656D00A3D8E1 /* KFOWMMainWeatherModel.m in Sources */,
+				1DFA3FDF17BD656D00A3D8E1 /* KFOWMRainModel.m in Sources */,
+				1DFA3FE017BD656D00A3D8E1 /* KFOWMSystemModel.m in Sources */,
+				1DFA3FE117BD656D00A3D8E1 /* KFOWMWeatherModel.m in Sources */,
+				1DFA3FE217BD656D00A3D8E1 /* KFOWMWindModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
