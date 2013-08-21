@@ -45,6 +45,13 @@ typedef NS_ENUM(NSUInteger, KFOWMMUnitType)
     KFOWMUnitTypeImperial
 };
 
+
+typedef NS_ENUM(NSUInteger, KFOWMSearchType)
+{
+    KFOWMSearchTypeAccurat,
+    KFOWMSearchTypeLike
+};
+
 /**
  *  A client connecting to the OpenWeatherMap API for fetching current weather, interval/daily forecasts, and searching cities.
  */
@@ -180,5 +187,14 @@ typedef NS_ENUM(NSUInteger, KFOWMMUnitType)
  */
 - (void)searchForPhrase:(NSString *)phrase numberOfResults:(NSUInteger)results withResultBlock:(KFOWMResultBlock)resultBlock;
 
+/**
+ *  Searches for a phrase and returns a list of matching cities.
+ *
+ *  @param phrase      The phrase to search for
+ *  @param results     Limits the number of results
+ *  @param searchType  Accurate or like search
+ *  @param resultBlock Result containing success, parsed `KFOWMSearchResponseModel`, and/or ocurred error.
+ */
+- (void)searchForPhrase:(NSString *)phrase numberOfResults:(NSUInteger)results type:(KFOWMSearchType)searchType withResultBlock:(KFOWMResultBlock)resultBlock;
 
 @end

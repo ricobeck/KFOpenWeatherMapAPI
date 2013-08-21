@@ -216,7 +216,26 @@
 
 - (void)searchForPhrase:(NSString *)phrase numberOfResults:(NSUInteger)results withResultBlock:(KFOWMResultBlock)resultBlock
 {
-    NSDictionary *params = [self parametersWithDictionary:@{@"q": phrase, @"cnt": @(results)}];
+    [self searchForPhrase:phrase numberOfResults:results type:KFOWMSearchTypeLike withResultBlock:resultBlock];
+}
+
+
+- (void)searchForPhrase:(NSString *)phrase numberOfResults:(NSUInteger)results type:(KFOWMSearchType)searchType withResultBlock:(KFOWMResultBlock)resultBlock
+{
+    NSString *searchTypeValue;
+    switch (searchType)
+    {
+        case KFOWMSearchTypeAccurat:
+            searchTypeValue = @"accurate";
+            break;
+        case KFOWMSearchTypeLike:
+        default:
+            searchTypeValue = @"like";
+            break;
+    }
+    
+    
+    NSDictionary *params = [self parametersWithDictionary:@{@"q": phrase, @"cnt": @(results), @"linke": searchTypeValue}];
     [self getPath:@"find" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          NSDictionary *responseDictionary = responseObject;
