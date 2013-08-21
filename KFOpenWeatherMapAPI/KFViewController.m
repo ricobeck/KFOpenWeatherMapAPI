@@ -11,9 +11,11 @@
 
 #import "KFOWMWeatherResponseModel.h"
 #import "KFOWMMainWeatherModel.h"
+#import "KFOWMWeatherModel.h"
 #import "KFOWMForecastResponseModel.h"
 #import "KFOWMCityModel.h"
 #import "KFOWMDailyForecastResponseModel.h"
+#import "KFOWMDailyForecastListModel.h"
 #import "KFOWMSearchResponseModel.h"
 #import "KFOWMSystemModel.h"
 
@@ -71,6 +73,10 @@
         {
             KFOWMDailyForecastResponseModel *responseModel = (KFOWMDailyForecastResponseModel *)responseData;
             NSLog(@"received daily forecast: %@, %@", responseModel.city.cityName, [[responseModel.list valueForKeyPath:@"temperature.day"] componentsJoinedByString:@" K, "]);
+            
+            KFOWMDailyForecastListModel *listModel = responseModel.list[0];
+            KFOWMWeatherModel *weatherModel = listModel.weather[0];
+            NSLog(@"daily forecast first day weather icon: %@", weatherModel.icon);
         }
         else
         {
