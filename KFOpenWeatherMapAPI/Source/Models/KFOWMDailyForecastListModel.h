@@ -26,6 +26,9 @@
 
 @class KFOWMForecastTemperatureModel;
 
+@protocol KFOWMWeatherModel;
+
+
 /**
  *  Contains all forecast data.
  */
@@ -71,6 +74,12 @@
  *  The wind direction in degrees.
  */
 @property (nonatomic, strong) NSNumber *windDeg;
+
+
+/**
+ *  A list of `KFOWMWeatherModel`s.
+ */
+@property (nonatomic, strong) NSArray<KFOWMWeatherModel> *weather;
 
 
 /**
