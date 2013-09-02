@@ -235,7 +235,7 @@
     }
     
     
-    NSDictionary *params = [self parametersWithDictionary:@{@"q": phrase, @"cnt": @(results), @"linke": searchTypeValue}];
+    NSDictionary *params = [self parametersWithDictionary:@{@"q": phrase, @"cnt": @(results), @"type": searchTypeValue}];
     [self getPath:@"find" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          NSDictionary *responseDictionary = responseObject;
