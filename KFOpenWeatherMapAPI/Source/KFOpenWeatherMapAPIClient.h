@@ -197,4 +197,23 @@ typedef NS_ENUM(NSUInteger, KFOWMSearchType)
  */
 - (void)searchForPhrase:(NSString *)phrase numberOfResults:(NSUInteger)results type:(KFOWMSearchType)searchType withResultBlock:(KFOWMResultBlock)resultBlock;
 
+/**
+ *  Converts a temperature value from Kelvin to Celsius.
+ *
+ *  @param kelvin The input value in Kelvin.
+ *
+ *  @return The converted value in Celsius.
+ */
+- (NSNumber *)kelvinToCelcius:(NSNumber *)kelvin;
+
+/**
+ *  Converts a temperature value from Kelvin to Fahrenheit.
+ *
+ *  @param kelvin The input value in Kelvin.
+ *
+ *  @return The converted value in Fahrenheit.
+ */
+- (NSNumber *)kelvinToFahrenheit:(NSNumber *)kelvin;
+
+
 @end
