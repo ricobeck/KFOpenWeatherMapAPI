@@ -235,7 +235,7 @@
     }
     
     
-    NSDictionary *params = [self parametersWithDictionary:@{@"q": phrase, @"cnt": @(results), @"linke": searchTypeValue}];
+    NSDictionary *params = [self parametersWithDictionary:@{@"q": phrase, @"cnt": @(results), @"type": searchTypeValue}];
     [self getPath:@"find" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          NSDictionary *responseDictionary = responseObject;
@@ -302,13 +302,13 @@
 
 - (NSNumber *)kelvinToCelcius:(NSNumber *)kelvin
 {
-    return @(kelvin.floatValue - 273.15);
+    return @(kelvin.floatValue - 273.15f);
 }
 
 
 - (NSNumber *)kelvinToFahrenheit:(NSNumber *)kelvin
 {
-    return @((kelvin.floatValue * 9/5) - 459.67);
+    return @((kelvin.floatValue * 9.0f/5.0f) - 459.67f);
 }
 
 

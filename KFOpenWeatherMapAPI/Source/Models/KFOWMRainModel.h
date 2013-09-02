@@ -13,7 +13,7 @@
 /**
  *  Amount of rain in the next three hours.
  */
-@property (nonatomic, strong) NSNumber *next3h;
+@property (nonatomic, strong) NSNumber<Optional> *next3h;
 
 
 @end
