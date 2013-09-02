@@ -302,13 +302,13 @@
 
 - (NSNumber *)kelvinToCelcius:(NSNumber *)kelvin
 {
-    return @(kelvin.floatValue - 273.15);
+    return @(kelvin.floatValue - 273.15f);
 }
 
 
 - (NSNumber *)kelvinToFahrenheit:(NSNumber *)kelvin
 {
-    return @((kelvin.floatValue * 9/5) - 459.67);
+    return @((kelvin.floatValue * 9.0f/5.0f) - 459.67f);
 }
 
 
